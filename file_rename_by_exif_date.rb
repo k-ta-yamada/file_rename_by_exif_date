@@ -22,8 +22,8 @@ require 'exifr'
 exit if (defined?(Ocra))
 
 puts 'RENAME_EXEC? (yes:y / no:other)'
-# RENAME_EXEC = STDIN.gets.chomp == 'y' ? true : false
-RENAME_EXEC           = false
+RENAME_EXEC = STDIN.gets.chomp == 'y' ? true : false
+# RENAME_EXEC           = false
 # 処理対象のディレクトリ
 PROC_DIR              = ENV['HOME'] + '/Dropbox/Camera Uploads'
 # １つ前のリネームファイル名称
@@ -132,7 +132,7 @@ begin
   puts "> are you sure? and continue? (yes:y / no:other)"
   puts ">"
   # "y"が入力されたら処理を続行する。"y"以外は処理を終了する。
-  # exit unless gets.chomp == "y"
+  exit unless gets.chomp == "y"
   puts
 
 
