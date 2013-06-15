@@ -138,7 +138,7 @@ begin
 
   # 拡張子が「.jpg」のファイル一覧を取得して、ファイル名でソートしておく
   # file_list = Dir.glob('*.jpg').sort_by{ |f| f }
-  file_list = Dir.glob('*.jpg').sort
+  file_list = Dir.glob(['*.jpg','*.JPG']).sort
 
   # ファイル一覧を元に処理を開始する
   file_list.each.with_index(1) do |file, index|
