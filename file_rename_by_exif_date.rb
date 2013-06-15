@@ -22,8 +22,8 @@ require 'exifr'
 exit if (defined?(Ocra))
 
 puts 'RENAME_EXEC? (yes:y / no:other)'
-# RENAME_EXEC = STDIN.gets.chomp == 'y' ? true : false
-RENAME_EXEC           = false
+RENAME_EXEC = STDIN.gets.chomp == 'y' ? true : false
+# RENAME_EXEC           = false
 # 処理対象のディレクトリ
 PROC_DIR              = ENV['HOME'] + '/Dropbox/Camera Uploads'
 # １つ前のリネームファイル名称
@@ -132,13 +132,13 @@ begin
   puts "> are you sure? and continue? (yes:y / no:other)"
   puts ">"
   # "y"が入力されたら処理を続行する。"y"以外は処理を終了する。
-  # exit unless gets.chomp == "y"
+  exit unless gets.chomp == "y"
   puts
 
 
   # 拡張子が「.jpg」のファイル一覧を取得して、ファイル名でソートしておく
   # file_list = Dir.glob('*.jpg').sort_by{ |f| f }
-  file_list = Dir.glob('*.jpg').sort
+  file_list = Dir.glob(['*.jpg','*.JPG']).sort
 
   # ファイル一覧を元に処理を開始する
   file_list.each.with_index(1) do |file, index|

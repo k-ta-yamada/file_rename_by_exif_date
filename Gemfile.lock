@@ -23,6 +23,7 @@ GEM
     slop (3.4.5)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
