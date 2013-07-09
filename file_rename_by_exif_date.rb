@@ -1,11 +1,6 @@
 # encoding: utf-8
 # ####################################################################################################
 # file_rename_by_exif_date.rb
-#
-
-# issue1 added this line!!
-
-#
 #   指定したフォルダ内のファイルについて、
 #   exif情報の撮影日時（date_time_original）を利用したファイル名に変更する
 #   exifがnilの場合や、ファイル名がすでに存在する場合は処理対象外
@@ -13,13 +8,6 @@
 #   rename_file_name = date_time_original.strftime("%Y-%m-%d %H.%M.%S") + ".jpg"
 #
 #   処理概要
-
-# this line is issue2 added
-# hello ?
-# issue2 end
-# this is issue3
-# conflict issue2
-
 #     ファイル名の形式チェック（"%Y-%m-%d %H.%M.%S"のように数字がならんでいること）
 #       形式に合致した場合は処理スキップ
 #     exif情報の取得
