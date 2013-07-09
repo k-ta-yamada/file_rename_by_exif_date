@@ -17,6 +17,8 @@
 # this line is issue2 added
 # hello ?
 # issue2 end
+# this is issue3
+# conflict issue2
 
 #     ファイル名の形式チェック（"%Y-%m-%d %H.%M.%S"のように数字がならんでいること）
 #       形式に合致した場合は処理スキップ
